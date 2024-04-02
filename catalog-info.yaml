@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "nodejs-ssh-key"
+  description: "nothing special"
+  annotations:
+    github.com/project-slug: user:default/shujaahmedi2l/nodejs-ssh-key
+    argocd/app-name: nodejs-ssh-key
+  links:
+    - url: "https://dashboard-shuja.onexidp.com"
+      title: Web Application
+      icon: LaunchIcon
+spec:
+  type: service
+  owner: guests
+  lifecycle: experimental
