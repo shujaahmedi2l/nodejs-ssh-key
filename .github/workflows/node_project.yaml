@@ -25,7 +25,7 @@ jobs:
           sudo cp argo-ci-cd/${{ secrets.ARGO_CI_CD_YAML_NAME }} /tmp/${{ secrets.ARGO_CI_CD_YAML_NAME }}
           sudo cp ecr/${{ secrets.ECR_YAML_NAME }} /tmp/${{ secrets.ECR_YAML_NAME }}
           cd /tmp
-          sudo git clone git@github.com/robotfree/onexidp-gitops.git main
+          sudo git clone git@github.com:robotfree/onexidp-gitops.git main
           ls -la
           sudo cp /tmp/${{ secrets.ARGO_CI_CD_YAML_NAME }} /tmp/main/onexidp/apps/${{ secrets.ARGO_CI_CD_YAML_NAME }}
           sudo cp /tmp/${{ secrets.ECR_YAML_NAME }} /tmp/main/aws-resources/${{ secrets.ECR_YAML_NAME }}
@@ -33,7 +33,7 @@ jobs:
           ls -la
           sudo git add .
           sudo git commit -m "Updating apps/${{ secrets.ARGO_CI_CD_YAML_NAME }} file"
-          sudo git push git@github.com/robotfree/onexidp-gitops.git main
+          sudo git push git@github.com:robotfree/onexidp-gitops.git main
 
       - name: Setup AWS ECR Details
         uses: aws-actions/configure-aws-credentials@v1
